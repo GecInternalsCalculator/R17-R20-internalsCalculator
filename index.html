@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>
+R-20 Internal
+</title>
+<style>
+    body{
+        background-color: black;
+    }
+.logo{
+height:100px;
+width:100px;
+float:left;
+margin-right:60px;
+}
+.main{
+font-family:Arial;
+padding-bottom:30px;
+padding-top:30px;
+color:peru;
+}
+    .main1{
+font-family:Arial;
+padding-bottom:30px;
+padding-top:30px;
+color:peru;
+margin-left: 120px;
+}
+form{
+    margin-left:20%;
+     background-color:peru;
+    margin-right: 20%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right:150px;
+   
+}
+    label{
+        float: left;
+        margin-right: 50px;
+        font-size: 20px;
+    }
+
+h3{
+font-family:Arial;
+margin-top: 10%;
+margin-left: 30%;
+color:peru;
+}
+.mid input{
+    margin-left: 4px;
+    height: 30px;
+    background-color:peru;
+    width: 250px;
+    margin-top: 15px;
+     border: none; 
+ border:solid 3px #000;
+ border-radius: 10px;
+ border-radius: 10px;
+    }
+input::placeholder{
+color:black;
+background-color: peru;
+transition:color 0.2s;
+cursor: pointer;
+}
+input:hover::placeholder,
+input:active::placeholder
+    {
+color:transparent;
+background-color: peru;
+    }
+.cs input{
+    height: 30px;
+    background-color:peru;
+    width: 250px;
+    margin-top: 15px;
+     border: none; 
+ border:solid 3px #000;
+ border-radius: 10px;
+    }
+.as input{
+     height: 30px;
+    background-color:peru;
+    width: 250px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+     border: none; 
+ border:solid 3px #000;
+ border-radius: 10px;
+       
+    }
+    .mid{
+        padding-bottom: 25px;
+    }
+    .cs{
+        padding-bottom: 25px;
+    }
+    .as{
+        padding-bottom: 25px;}
+.sub{
+    background:#000;
+    height: 40px;
+    color:#fff;
+    width:100px;
+    cursor: pointer;
+    border:solid 2px #fff;
+    border-radius: 200px;
+transition: background;
+}
+.sub:hover,
+.sub:active,
+.sub:visited{
+    background:#4834d4;
+    height: 40px;
+    color:#fff;
+    width:100px;
+    cursor: pointer;
+    border:solid 2px #fff;
+    border-radius: 200px;
+}
+.res{
+    background:#000;
+    height: 40px;
+    color:#fff;
+    width:100px;
+    cursor: pointer;
+    border:solid 2px #fff;
+    border-radius: 200px;
+transition: background;
+}
+.res:hover,
+.res:active,
+.res:visited{
+    background: #4834d4;
+    height: 40px;
+    color:#fff;
+    width:100px;
+    cursor: pointer;
+    border:solid 2px #fff;
+    border-radius: 200px;
+
+}
+    
+     a{
+    text-decoration: none;
+    background-color: #000;
+    height: 40px;
+    color:#fff;
+    width:100px;
+    cursor: pointer;
+    border:solid 2px #fff;
+    border-radius: 200px;
+    padding-top:9px;
+    padding-bottom:9px;
+        padding-left: 19px;
+        padding-right: 19px;
+         transition: background;
+    }
+    a:hover{
+        background-color: #4834d4;
+    }
+    p{
+        margin-left: 3%;
+    }
+</style>
+<script>
+    function validate(){
+        count=0;
+        mid1=f1.mid1.value;
+        mid2=f1.mid2.value;
+        cs1=f1.ct1.value;
+        cs2=f1.ct2.value;
+        as1=f1.as1.value;
+        as2=f1.as2.value;
+        if(mid1=="" || mid1==null){
+         window.alert("the mid1 field cant be empty"); 
+        return false;
+
+         }
+          if(parseInt(mid1)>15 || parseInt(mid1)<0){
+         window.alert("the mid1 value should be between 0 to 15");
+        return false;
+
+          }
+        if(mid2=="" || mid2==null){
+         window.alert("the mid2 field cant be empty"); 
+        return false;
+         }
+        if(parseInt(mid2)>15 || parseInt(mid2)<0){
+         window.alert("the mid2 value should be between 0 to 15");
+        return false;
+          }
+        
+        if(cs1=="" || cs1==null){
+         window.alert("the class test1 field cant be empty"); 
+       return false;
+         }
+        if(parseInt(cs1)>10 || parseInt(cs1)<0){
+         window.alert("the class test1 value should be between 0 to 10");
+        return false;
+          }
+        if(cs2=="" || cs2==null){
+         window.alert("the class test2 field cant be empty"); 
+       return false;
+         }
+        if(parseInt(cs2)>10 || parseInt(cs2)<0){
+         window.alert("the class test2 value should be between 0 to 10");
+       return false;
+          }
+        if(as1=="" || as1==null){
+         window.alert("the assignment field cant be empty"); 
+        return false;
+         }
+        if(as2=="" || as2==null){
+         window.alert("the assignment field cant be empty"); 
+    return false;
+         }
+        if(parseInt(as1)>5 || parseInt(as1)<0){
+         window.alert("the assignment1 value should be between 0 to 5");
+            return false;
+          }
+        if(parseInt(as2)>5 || parseInt(as2)<0){
+         window.alert("the assignment2 value should be between 0 to 5");
+            return false;
+          }
+        c1=parseInt(cs1);
+        m1=parseInt(mid1);
+        a1=parseInt(as1);
+        c2=parseInt(cs2);
+        m2=parseInt(mid2);
+        a2=parseInt(as2);
+        m=c1+a1+m1;
+        n=c2+a2+m2;
+        if(m>=n){
+            o=(m*(0.8))+((0.2)*n);
+        }
+        else{
+             o=(n*(0.8))+((0.2)*m);
+        }
+        o=Math.ceil(o);
+        window.alert("Your internal marks are: "+o);
+            return false;
+    }
+</script>
+</head>
+<body>
+<img  class='logo'src='https://aitees2022.com/assets/col_logo2.jpg'>
+<h1 class='main'>R-20 Internal Calculator for</h1>
+    <h1 class='main1'> Seshadri Rao Gudlavalleru Engineering College</h1>
+<marquee width="100%" direction="right" height="200px" scrollamount="25"><h3> Enter details here:</h3></marquee>
+<form name='f1' class='form' onsubmit="return validate()" >
+<div class='mid'>
+    <label>Enter your mid1 marks </label>  
+<input type='text' name='mid1' placeholder='between(0 to 15)' pattern="[0-9]+">
+    </div>
+    <div class="mid">
+<label>Enter your mid2 marks </label>
+<input type='text' name='mid2' placeholder='between(0 to 15)' pattern="[0-9]+">
+        </div>
+    <div class='cs'>
+<label>Enter your class test1 marks </label>
+<input type='text' name='ct1' placeholder='between(0 to 20)' pattern="[0-9]+">
+    </div>
+<div class='cs'>
+<label>Enter your class test2 marks </label>   
+<input type='text' name='ct2' placeholder='between(0 to 20)' pattern="[0-9]+">
+    </div>
+    <div class='as'>
+<label>Enter your assignment1 marks </label>
+<input type='text' name='as1' placeholder='between(0 to 5)' pattern="[0-9]+">
+    </div>
+    <div class='as'>
+    <label>Enter your assignment2 marks </label>
+<input type='text' name='as2' placeholder='between(0 to 5)' pattern="[0-9]+">
+    </div>
+<input type='submit' class='sub'>
+<input type='reset' class='res'> 
+    <br>
+    <br>
+      <a href='r-17%20internal.html'>for R-17</a>
+    <p>for R-17 Download and run</p>
+</form>
+  
+<marquee width="100%" direction="right" height="200px" scrollamount="20"><h3>for mobile use only</h3></marquee>    
+</body>
+</html>
